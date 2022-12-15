@@ -141,7 +141,7 @@ class FindPrefixes:
             first = self.binary_search_first()
         except EmptyInput:
             return 'Sorry empty input or cannot find match'
-        last = self.binary_search_last() + 1
+        last = self.binary_search_last(start=first) + 1
         return self.input_list[first:last]
 
 

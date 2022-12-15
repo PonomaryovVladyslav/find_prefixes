@@ -66,7 +66,7 @@ class TestIsLeftLast(TestCase):
         self.assertFalse(is_left_1)
         self.assertFalse(is_left_2)
         self.assertFalse(is_left_3)
-        self.assertTrue(is_left_4)
+        self.assertFalse(is_left_4)
         self.assertTrue(is_left_5)
 
     def test_move_right(self):
@@ -81,7 +81,7 @@ class TestIsLeftLast(TestCase):
         self.assertFalse(is_left_1)
         self.assertFalse(is_left_2)
         self.assertFalse(is_left_3)
-        self.assertTrue(is_left_4)
+        self.assertFalse(is_left_4)
         self.assertTrue(is_left_5)
 
 
