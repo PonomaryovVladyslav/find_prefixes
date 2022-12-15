@@ -92,8 +92,7 @@ class FindPrefixes:
             if not mid:
                 if self.input_list[0].startswith(self.prefix):
                     return 0
-                else:
-                    raise EmptyInput
+                raise EmptyInput
             elif self.input_list[mid].startswith(self.prefix) and not self.input_list[mid - 1].startswith(
                     self.prefix):
                 return mid
@@ -101,8 +100,7 @@ class FindPrefixes:
                 return self.binary_search_first(start=end, end=end)
             if self.is_left_first(mid):
                 return self.binary_search_first(start=start, end=mid)
-            else:
-                return self.binary_search_first(start=mid, end=end)
+            return self.binary_search_first(start=mid, end=end)
         except IndexError:
             raise EmptyInput
         except EmptyInput:
@@ -120,8 +118,7 @@ class FindPrefixes:
             if not mid:
                 if self.input_list[0].startswith(self.prefix):
                     return 0
-                else:
-                    raise EmptyInput
+                raise EmptyInput
             elif self.input_list[mid - 1].startswith(self.prefix) and not self.input_list[mid].startswith(
                     self.prefix):
                 return mid - 1
@@ -129,8 +126,7 @@ class FindPrefixes:
                 return mid
             if self.is_left_last(mid):
                 return self.binary_search_last(start=start, end=mid)
-            else:
-                return self.binary_search_last(start=mid, end=end)
+            return self.binary_search_last(start=mid, end=end)
         except IndexError:
             raise EmptyInput
 
